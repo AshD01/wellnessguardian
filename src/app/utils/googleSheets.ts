@@ -1,5 +1,5 @@
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || '';
-const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || '';
+const SUPABASE_URL = 'https://xfvjhbtdxgtbuqmfkghw.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_0bfyQHzhemp55dA67rmDng_QUR-f0D-';
 
 async function insertLead(data: Record<string, string>) {
   if (!SUPABASE_URL || !SUPABASE_KEY) {
