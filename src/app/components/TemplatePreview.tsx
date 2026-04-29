@@ -72,37 +72,37 @@ IF priority = "${selectedPriority}" THEN
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#F3EFFF] to-[#FAF7FF] py-12 px-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#DBD7E6] to-[#E1DEE6] py-12 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Control Panel */}
         <div className="bg-white rounded-2xl shadow-xl p-6 mb-8">
-          <h1 className="text-3xl mb-2 text-[#4A4458]" style={{ fontFamily: 'var(--font-serif)' }}>
+          <h1 className="text-3xl mb-2 text-[#433D4F]" style={{ fontFamily: 'var(--font-serif)' }}>
             Protocol Template Preview
           </h1>
-          <p className="text-[#8B7E9E] mb-6">
+          <p className="text-[#7D718E] mb-6">
             Design reference for PDFMonkey / Bannerbear integration
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label className="block text-sm text-[#8B7E9E] mb-2">
-                User Name (<code className="text-xs bg-[#F3EFFF] px-1 rounded">{'{{User_Name}}'}</code>):
+              <label className="block text-sm text-[#7D718E] mb-2">
+                User Name (<code className="text-xs bg-[#DBD7E6] px-1 rounded">{'{{User_Name}}'}</code>):
               </label>
               <input
                 type="text"
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border-2 border-[#F3EFFF] focus:border-[#FF8B9E] focus:outline-none"
+                className="w-full px-4 py-3 rounded-xl border-2 border-[#DBD7E6] focus:border-[#E67D8E] focus:outline-none"
                 placeholder="Enter name"
               />
             </div>
 
             <div>
-              <label className="block text-sm text-[#8B7E9E] mb-2">Priority Focus:</label>
+              <label className="block text-sm text-[#7D718E] mb-2">Priority Focus:</label>
               <select
                 value={selectedPriority}
                 onChange={(e) => setSelectedPriority(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border-2 border-[#F3EFFF] focus:border-[#FF8B9E] focus:outline-none"
+                className="w-full px-4 py-3 rounded-xl border-2 border-[#DBD7E6] focus:border-[#E67D8E] focus:outline-none"
               >
                 <option value="joint">🦴 Joint Health</option>
                 <option value="energy">⚡ Energy</option>
@@ -115,14 +115,14 @@ IF priority = "${selectedPriority}" THEN
           <div className="flex gap-3">
             <button
               onClick={handleScreenshot}
-              className="flex items-center gap-2 px-6 py-3 bg-[#FF8B9E] text-white rounded-xl hover:bg-[#B86D2D] transition-all"
+              className="flex items-center gap-2 px-6 py-3 bg-[#E67D8E] text-white rounded-xl hover:bg-[#B86D2D] transition-all"
             >
               <Download className="w-4 h-4" />
               Save Template as Image
             </button>
             <button
               onClick={() => setShowCode(!showCode)}
-              className="flex items-center gap-2 px-6 py-3 border-2 border-[#FF8B9E] text-[#FF8B9E] rounded-xl hover:bg-[#FF8B9E] hover:text-white transition-all"
+              className="flex items-center gap-2 px-6 py-3 border-2 border-[#E67D8E] text-[#E67D8E] rounded-xl hover:bg-[#E67D8E] hover:text-white transition-all"
             >
               <Code className="w-4 h-4" />
               {showCode ? 'Hide' : 'Show'} Variables
@@ -130,7 +130,7 @@ IF priority = "${selectedPriority}" THEN
           </div>
 
           {showCode && (
-            <div className="mt-6 bg-[#4A4458] text-[#B8A8D8] rounded-xl p-5 overflow-x-auto">
+            <div className="mt-6 bg-[#433D4F] text-[#A697C2] rounded-xl p-5 overflow-x-auto">
               <pre className="text-sm font-mono whitespace-pre-wrap">{placeholderCode}</pre>
             </div>
           )}
@@ -152,9 +152,9 @@ IF priority = "${selectedPriority}" THEN
 
         {/* Documentation Link */}
         <div className="mt-8 text-center">
-          <p className="text-[#8B7E9E] text-sm">
+          <p className="text-[#7D718E] text-sm">
             📋 Full integration guide available in{' '}
-            <code className="bg-[#F3EFFF] px-2 py-1 rounded text-[#FF8B9E]">TEMPLATE_GUIDE.md</code>
+            <code className="bg-[#DBD7E6] px-2 py-1 rounded text-[#E67D8E]">TEMPLATE_GUIDE.md</code>
           </p>
         </div>
       </div>

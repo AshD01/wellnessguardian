@@ -57,7 +57,7 @@ function Container9() {
   return (
     <div className="absolute h-[506.436px] left-0 top-[91.15px] w-[344.974px]" data-name="Container">
       <Paragraph />
-      <p className="-translate-x-1/2 absolute font-['Inter:Regular',sans-serif] font-normal leading-[28px] left-[172.51px] not-italic text-[#8b7e9e] text-[16px] text-center top-[80.86px] w-[345px]">Spin the wheel to make a personalised wellness guide for your Family!</p>
+      <p className="-translate-x-1/2 absolute font-['Inter:Regular',sans-serif] font-normal leading-[28px] left-[172.51px] not-italic text-[#7d718e] text-[16px] text-center top-[80.86px] w-[345px]">Spin the wheel to make a personalised wellness guide for your Family!</p>
       <div className="absolute h-[424px] left-[-110.99px] opacity-30 top-[154.86px] w-[565px]" data-name="ezgif-6013d935486327ab 1">
         <video autoPlay className="absolute max-w-none object-cover size-full" controlsList="nodownload" loop playsInline>
           <source src="/_videos/v1/f75fa7a31869744e863b00145bfb120428661fab" />
@@ -82,7 +82,7 @@ function Container10() {
 function Heading() {
   return (
     <div className="absolute h-[134.987px] left-[0.01px] top-[16.01px] w-[344.974px]" data-name="Heading 1">
-      <p className="-translate-x-1/2 absolute font-['Lora:Medium',sans-serif] font-medium leading-[45px] left-[172.5px] text-[#4a4458] text-[36px] text-center top-[-1.17px] w-[345px]">Become the Wellness Guardian of your family!</p>
+      <p className="-translate-x-1/2 absolute font-['Lora:Medium',sans-serif] font-medium leading-[45px] left-[172.5px] text-[#433d4f] text-[36px] text-center top-[-1.17px] w-[345px]">Become the Wellness Guardian of your family!</p>
     </div>
   );
 }
@@ -98,7 +98,7 @@ function Button() {
 function Paragraph1() {
   return (
     <div className="absolute h-[15.991px] left-[0.01px] top-[756.01px] w-[344.974px]" data-name="Paragraph">
-      <p className="-translate-x-1/2 absolute font-['Inter:Regular',sans-serif] font-normal leading-[16px] left-[172.83px] not-italic text-[#8b7e9e] text-[12px] text-center top-[0.59px] whitespace-nowrap">✨ Free • Takes 30 seconds • Get personalized guidance</p>
+      <p className="-translate-x-1/2 absolute font-['Inter:Regular',sans-serif] font-normal leading-[16px] left-[172.83px] not-italic text-[#7d718e] text-[12px] text-center top-[0.59px] whitespace-nowrap">✨ Free • Takes 30 seconds • Get personalized guidance</p>
     </div>
   );
 }
@@ -126,7 +126,7 @@ function LandingScreen() {
 
 export default function HealthConciergeAppDesign() {
   return (
-    <div className="bg-[#faf7ff] content-stretch flex flex-col items-start pr-[0.043px] relative size-full" data-name="Health Concierge App Design">
+    <div className="bg-[#e1dee6] content-stretch flex flex-col items-start pr-[0.043px] relative size-full" data-name="Health Concierge App Design">
       <LandingScreen />
     </div>
   );

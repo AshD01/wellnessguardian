@@ -22,7 +22,7 @@ export function WellnessPathCardScreen({
   const path = getPathById(goalId);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#E8DEFF] via-[#F5F0FF] to-[#FFE8F0] flex flex-col px-6 py-6 relative overflow-y-auto">
+    <div className="min-h-screen bg-gradient-to-br from-[#D1C8E6] via-[#DDD8E6] to-[#E6D1D8] flex flex-col px-6 py-6 relative overflow-y-auto">
       <AnimatedBackground />
 
       <div className="flex flex-col max-w-lg mx-auto w-full relative z-10 py-4">
@@ -72,29 +72,29 @@ export function WellnessPathCardScreen({
                        style={{ backgroundColor: `${path.color}20` }}>
                     <Activity className="w-4 h-4" style={{ color: path.color }} />
                   </div>
-                  <h4 className="text-xs text-[#8B7E9E] tracking-wider">YOUR DAILY ACTION</h4>
+                  <h4 className="text-xs text-[#7D718E] tracking-wider">YOUR DAILY ACTION</h4>
                 </div>
-                <p className="text-[#4A4458] leading-relaxed">{path.action}</p>
+                <p className="text-[#433D4F] leading-relaxed">{path.action}</p>
               </div>
 
-              <div className="border-l-4 border-[#B8A8D8] pl-5 py-2">
+              <div className="border-l-4 border-[#A697C2] pl-5 py-2">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-[#B8A8D8]/20 flex items-center justify-center">
-                    <Apple className="w-4 h-4 text-[#B8A8D8]" />
+                  <div className="w-8 h-8 rounded-full bg-[#A697C2]/20 flex items-center justify-center">
+                    <Apple className="w-4 h-4 text-[#A697C2]" />
                   </div>
-                  <h4 className="text-xs text-[#8B7E9E] tracking-wider">YOUR NUTRITION FOCUS</h4>
+                  <h4 className="text-xs text-[#7D718E] tracking-wider">YOUR NUTRITION FOCUS</h4>
                 </div>
-                <p className="text-[#4A4458] leading-relaxed">{path.nutrition}</p>
+                <p className="text-[#433D4F] leading-relaxed">{path.nutrition}</p>
               </div>
 
-              <div className="border-l-4 border-[#FFC4D0] pl-5 py-2">
+              <div className="border-l-4 border-[#E6B0BB] pl-5 py-2">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-[#FFC4D0]/20 flex items-center justify-center">
-                    <Brain className="w-4 h-4 text-[#FFC4D0]" />
+                  <div className="w-8 h-8 rounded-full bg-[#E6B0BB]/20 flex items-center justify-center">
+                    <Brain className="w-4 h-4 text-[#E6B0BB]" />
                   </div>
-                  <h4 className="text-xs text-[#8B7E9E] tracking-wider">YOUR MINDSET MANTRA</h4>
+                  <h4 className="text-xs text-[#7D718E] tracking-wider">YOUR MINDSET MANTRA</h4>
                 </div>
-                <p className="text-[#4A4458] leading-relaxed italic">{path.mindset}</p>
+                <p className="text-[#433D4F] leading-relaxed italic">{path.mindset}</p>
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ export function WellnessPathCardScreen({
         <div className="flex gap-3 pb-6">
           <button
             onClick={onShare}
-            className="flex-1 py-4 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] border-2 border-[#D4718A] text-white hover:shadow-2xl transition-all shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2"
+            className="flex-1 py-4 rounded-2xl bg-gradient-to-r from-[#E67D8E] to-[#E6B0BB] border-2 border-[#BF667C] text-white hover:shadow-2xl transition-all shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2"
           >
             <Share2 className="w-4 h-4" />
             <span className="text-sm">Share</span>
@@ -112,7 +112,7 @@ export function WellnessPathCardScreen({
 
           <button
             onClick={onReset}
-            className="flex-1 py-4 rounded-2xl border-2 border-[#B8A8D8]/40 bg-white/80 text-[#4A4458] hover:bg-white hover:border-[#B8A8D8] transition-all text-sm font-medium"
+            className="flex-1 py-4 rounded-2xl border-2 border-[#A697C2]/40 bg-white/80 text-[#433D4F] hover:bg-white hover:border-[#A697C2] transition-all text-sm font-medium"
           >
             Create Another
           </button>

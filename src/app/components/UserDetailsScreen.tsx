@@ -40,27 +40,27 @@ export function UserDetailsScreen({ onComplete, onBack }: UserDetailsScreenProps
   };
 
   return (
-    <div className="min-h-dvh bg-gradient-to-b from-[#FAF7FF] to-[#F3EFFF] overflow-y-auto relative">
+    <div className="min-h-dvh bg-gradient-to-b from-[#E1DEE6] to-[#DBD7E6] overflow-y-auto relative">
       <AnimatedBackground />
       <div className="max-w-lg mx-auto w-full px-6 py-5 relative z-10">
         <div className="text-center mb-8">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FF8B9E] to-[#FFC4D0] mx-auto mb-3 flex items-center justify-center shadow-lg">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E67D8E] to-[#E6B0BB] mx-auto mb-3 flex items-center justify-center shadow-lg">
             <User className="w-6 h-6 text-white" />
           </div>
-          <h1 className="text-2xl mb-2 text-[#4A4458]" style={{ fontFamily: 'var(--font-serif)' }}>
+          <h1 className="text-2xl mb-2 text-[#433D4F]" style={{ fontFamily: 'var(--font-serif)' }}>
             Welcome, Wellness Guardian!
           </h1>
-          <p className="text-[#8B7E9E] text-lg mb-2">
+          <p className="text-[#7D718E] text-lg mb-2">
             First, let's get your details
           </p>
-          <p className="text-[#8B7E9E] text-sm">
+          <p className="text-[#7D718E] text-sm">
             We'll keep you updated on your family's wellness journey
           </p>
         </div>
 
         <div className="mb-6">
-          <label className="flex items-center gap-2 text-[#4A4458] mb-3">
-            <User className="w-5 h-5 text-[#FF8B9E]" />
+          <label className="flex items-center gap-2 text-[#433D4F] mb-3">
+            <User className="w-5 h-5 text-[#E67D8E]" />
             <span>Your Name</span>
           </label>
           <input
@@ -68,21 +68,21 @@ export function UserDetailsScreen({ onComplete, onBack }: UserDetailsScreenProps
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
             placeholder="Enter your full name"
-            className="w-full p-4 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-lg text-[#4A4458]"
+            className="w-full p-4 rounded-2xl border-2 border-[#DBD7E6] bg-white focus:border-[#E67D8E] focus:outline-none transition-all text-lg text-[#433D4F]"
             autoFocus
           />
         </div>
 
         <div className="mb-8">
-          <label className="flex items-center gap-2 text-[#4A4458] mb-3">
-            <Phone className="w-5 h-5 text-[#FF8B9E]" />
+          <label className="flex items-center gap-2 text-[#433D4F] mb-3">
+            <Phone className="w-5 h-5 text-[#E67D8E]" />
             <span>Your WhatsApp Number</span>
           </label>
           <div className="flex gap-2">
             <select
               value={countryCode}
               onChange={(e) => setCountryCode(e.target.value)}
-              className="w-32 p-4 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-base text-[#4A4458]"
+              className="w-32 p-4 rounded-2xl border-2 border-[#DBD7E6] bg-white focus:border-[#E67D8E] focus:outline-none transition-all text-base text-[#433D4F]"
             >
               {countryCodes.map(({ code, country, flag }) => (
                 <option key={code} value={code}>
@@ -95,10 +95,10 @@ export function UserDetailsScreen({ onComplete, onBack }: UserDetailsScreenProps
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="98765 43210"
-              className="flex-1 p-4 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-lg text-[#4A4458]"
+              className="flex-1 p-4 rounded-2xl border-2 border-[#DBD7E6] bg-white focus:border-[#E67D8E] focus:outline-none transition-all text-lg text-[#433D4F]"
             />
           </div>
-          <p className="text-xs text-[#8B7E9E] mt-2 ml-1">
+          <p className="text-xs text-[#7D718E] mt-2 ml-1">
             We'll send updates and wellness insights here
           </p>
         </div>
@@ -106,14 +106,14 @@ export function UserDetailsScreen({ onComplete, onBack }: UserDetailsScreenProps
         <div className="flex gap-3 pb-6">
           <button
             onClick={onBack}
-            className="px-8 py-4 rounded-2xl border-2 border-[#F3EFFF] bg-white text-[#4A4458] hover:border-[#FFC4D0] transition-all"
+            className="px-8 py-4 rounded-2xl border-2 border-[#DBD7E6] bg-white text-[#433D4F] hover:border-[#E6B0BB] transition-all"
           >
             Back
           </button>
           <button
             onClick={handleSubmit}
             disabled={!userName.trim() || !phone.trim()}
-            className="flex-1 py-4 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] border-2 border-[#D4718A] text-white hover:shadow-xl transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
+            className="flex-1 py-4 rounded-2xl bg-gradient-to-r from-[#E67D8E] to-[#E6B0BB] border-2 border-[#BF667C] text-white hover:shadow-xl transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
           >
             Continue
           </button>
