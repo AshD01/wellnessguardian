@@ -84,7 +84,7 @@ export function InputScreen({ onComplete, onBack }: InputScreenProps) {
   const totalCount = getTotalCount();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#FAF7FF] to-[#F3EFFF] overflow-y-auto relative">
+    <div className="min-h-dvh bg-gradient-to-b from-[#FAF7FF] to-[#F3EFFF] overflow-y-auto relative">
       <AnimatedBackground />
       <div className="max-w-lg mx-auto w-full px-6 py-6 relative z-10">
         {/* Header */}

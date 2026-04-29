@@ -15,21 +15,21 @@ export function PersonDetailsScreen({ personLabel, familyName, onComplete, onBac
   const [phone, setPhone] = useState('');
 
   const countryCodes = [
-    { code: '+91', country: 'India', flag: '🇮🇳' },
-    { code: '+1', country: 'USA', flag: '🇺🇸' },
-    { code: '+44', country: 'UK', flag: '🇬🇧' },
-    { code: '+971', country: 'UAE', flag: '🇦🇪' },
-    { code: '+65', country: 'Singapore', flag: '🇸🇬' },
-    { code: '+61', country: 'Australia', flag: '🇦🇺' },
-    { code: '+81', country: 'Japan', flag: '🇯🇵' },
-    { code: '+86', country: 'China', flag: '🇨🇳' },
-    { code: '+33', country: 'France', flag: '🇫🇷' },
-    { code: '+49', country: 'Germany', flag: '🇩🇪' },
-    { code: '+52', country: 'Mexico', flag: '🇲🇽' },
-    { code: '+55', country: 'Brazil', flag: '🇧🇷' },
-    { code: '+27', country: 'South Africa', flag: '🇿🇦' },
-    { code: '+82', country: 'South Korea', flag: '🇰🇷' },
-    { code: '+60', country: 'Malaysia', flag: '🇲🇾' }
+    { code: '+91', flag: '🇮🇳' },
+    { code: '+1', flag: '🇺🇸' },
+    { code: '+44', flag: '🇬🇧' },
+    { code: '+971', flag: '🇦🇪' },
+    { code: '+65', flag: '🇸🇬' },
+    { code: '+61', flag: '🇦🇺' },
+    { code: '+81', flag: '🇯🇵' },
+    { code: '+86', flag: '🇨🇳' },
+    { code: '+33', flag: '🇫🇷' },
+    { code: '+49', flag: '🇩🇪' },
+    { code: '+52', flag: '🇲🇽' },
+    { code: '+55', flag: '🇧🇷' },
+    { code: '+27', flag: '🇿🇦' },
+    { code: '+82', flag: '🇰🇷' },
+    { code: '+60', flag: '🇲🇾' }
   ];
 
   const handleSubmit = () => {
@@ -42,84 +42,80 @@ export function PersonDetailsScreen({ personLabel, familyName, onComplete, onBac
   };
 
   return (
-    <div className="h-screen bg-gradient-to-b from-[#FAF7FF] to-[#F3EFFF] flex flex-col px-6 py-8 overflow-hidden relative">
+    <div className="min-h-dvh bg-gradient-to-b from-[#FAF7FF] to-[#F3EFFF] flex flex-col relative">
       <AnimatedBackground />
-      <div className="flex-1 flex flex-col max-w-lg mx-auto w-full relative z-10">
-        <div className="text-center mb-8">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#FF8B9E] to-[#FFC4D0] mx-auto mb-4 flex items-center justify-center shadow-lg">
-            <User className="w-8 h-8 text-white" />
+
+      <div className="flex-1 overflow-y-auto px-6 pt-6 pb-2 relative z-10 max-w-lg mx-auto w-full">
+        <div className="text-center mb-5">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FF8B9E] to-[#FFC4D0] mx-auto mb-3 flex items-center justify-center shadow-lg">
+            <User className="w-6 h-6 text-white" />
           </div>
-          <h1 className="text-3xl mb-3 text-[#4A4458]" style={{ fontFamily: 'var(--font-serif)' }}>
+          <h1 className="text-2xl mb-2 text-[#4A4458]" style={{ fontFamily: 'var(--font-serif)' }}>
             Spotlight on {personLabel} Ji
           </h1>
-          <p className="text-[#8B7E9E] text-lg mb-2">
-            Let's get their details
-          </p>
+          <p className="text-[#8B7E9E] text-base mb-1">Let's get their details</p>
           <p className="text-[#8B7E9E] text-sm">
-            The system has selected {personLabel} Ji from the {familyName} family to receive the June Wellness Spotlight
+            {personLabel} Ji from the {familyName} family selected for the June Wellness Spotlight
           </p>
         </div>
 
-        <div className="flex-1 flex flex-col">
-          {/* Actual Name */}
-          <div className="mb-6">
-            <label className="flex items-center gap-2 text-[#4A4458] mb-3">
-              <User className="w-5 h-5 text-[#FF8B9E]" />
-              <span>What is {personLabel} Ji's name?</span>
-            </label>
+        <div className="mb-4">
+          <label className="flex items-center gap-2 text-[#4A4458] mb-2 text-sm">
+            <User className="w-4 h-4 text-[#FF8B9E]" />
+            <span>What is {personLabel} Ji's name?</span>
+          </label>
+          <input
+            type="text"
+            value={actualName}
+            onChange={(e) => setActualName(e.target.value)}
+            placeholder="Enter their full name"
+            className="w-full p-4 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-base text-[#4A4458]"
+            autoFocus
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="flex items-center gap-2 text-[#4A4458] mb-2 text-sm">
+            <Phone className="w-4 h-4 text-[#FF8B9E]" />
+            <span>WhatsApp Number</span>
+          </label>
+          <div className="flex gap-2">
+            <select
+              value={countryCode}
+              onChange={(e) => setCountryCode(e.target.value)}
+              className="w-28 p-4 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-sm text-[#4A4458]"
+            >
+              {countryCodes.map(({ code, flag }) => (
+                <option key={code} value={code}>{flag} {code}</option>
+              ))}
+            </select>
             <input
-              type="text"
-              value={actualName}
-              onChange={(e) => setActualName(e.target.value)}
-              placeholder="Enter their full name"
-              className="w-full p-5 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-lg text-[#4A4458]"
-              autoFocus
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder="98765 43210"
+              className="flex-1 p-4 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-base text-[#4A4458]"
             />
           </div>
-
-          {/* Phone Number */}
-          <div className="mb-8">
-            <label className="flex items-center gap-2 text-[#4A4458] mb-3">
-              <Phone className="w-5 h-5 text-[#FF8B9E]" />
-              <span>WhatsApp Number</span>
-            </label>
-            <div className="flex gap-2">
-              <select
-                value={countryCode}
-                onChange={(e) => setCountryCode(e.target.value)}
-                className="w-32 p-5 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-base text-[#4A4458]"
-              >
-                {countryCodes.map(({ code, country, flag }) => (
-                  <option key={code} value={code}>
-                    {flag} {code}
-                  </option>
-                ))}
-              </select>
-              <input
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="98765 43210"
-                className="flex-1 p-5 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-lg text-[#4A4458]"
-              />
-            </div>
-            <p className="text-xs text-[#8B7E9E] mt-2 ml-1">
-              We'll send their personalized wellness plan here
-            </p>
-          </div>
+          <p className="text-xs text-[#8B7E9E] mt-1 ml-1">We'll send their personalized wellness plan here</p>
         </div>
+      </div>
 
+      <div
+        className="sticky bottom-0 px-6 pt-3 relative z-10 max-w-lg mx-auto w-full bg-gradient-to-t from-[#F3EFFF] via-[#F3EFFF] to-transparent"
+        style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}
+      >
         <div className="flex gap-3">
           <button
             onClick={onBack}
-            className="px-8 py-4 rounded-2xl border-2 border-[#F3EFFF] bg-white text-[#4A4458] hover:border-[#FFC4D0] transition-all"
+            className="px-8 py-3 rounded-2xl border-2 border-[#F3EFFF] bg-white text-[#4A4458] hover:border-[#FFC4D0] transition-all"
           >
             Back
           </button>
           <button
             onClick={handleSubmit}
             disabled={!actualName.trim() || !phone.trim()}
-            className="flex-1 py-4 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] border-2 border-[#D4718A] text-white hover:shadow-xl transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
+            className="flex-1 py-3 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] border-2 border-[#D4718A] text-white hover:shadow-xl transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
           >
             Continue
           </button>

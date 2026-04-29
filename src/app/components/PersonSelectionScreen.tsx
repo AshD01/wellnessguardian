@@ -28,14 +28,14 @@ export function PersonSelectionScreen({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#FAF7FF] to-[#F3EFFF] overflow-y-auto relative">
+    <div className="min-h-dvh bg-gradient-to-b from-[#FAF7FF] to-[#F3EFFF] overflow-y-auto relative">
       <AnimatedBackground />
-      <div className="max-w-lg mx-auto w-full px-6 py-8 relative z-10">
+      <div className="max-w-lg mx-auto w-full px-6 py-5 relative z-10">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#FF8B9E] to-[#FFC4D0] mx-auto mb-4 flex items-center justify-center shadow-lg">
-            <Heart className="w-8 h-8 text-white" />
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FF8B9E] to-[#FFC4D0] mx-auto mb-3 flex items-center justify-center shadow-lg">
+            <Heart className="w-6 h-6 text-white" />
           </div>
-          <h1 className="text-3xl mb-3 text-[#4A4458]" style={{ fontFamily: 'var(--font-serif)' }}>
+          <h1 className="text-2xl mb-2 text-[#4A4458]" style={{ fontFamily: 'var(--font-serif)' }}>
             Who do you want to design the wellness plan for?
           </h1>
           <p className="text-[#8B7E9E] text-lg mb-2">

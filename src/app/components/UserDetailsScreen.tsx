@@ -40,14 +40,14 @@ export function UserDetailsScreen({ onComplete, onBack }: UserDetailsScreenProps
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#FAF7FF] to-[#F3EFFF] overflow-y-auto relative">
+    <div className="min-h-dvh bg-gradient-to-b from-[#FAF7FF] to-[#F3EFFF] overflow-y-auto relative">
       <AnimatedBackground />
-      <div className="max-w-lg mx-auto w-full px-6 py-8 relative z-10">
+      <div className="max-w-lg mx-auto w-full px-6 py-5 relative z-10">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#FF8B9E] to-[#FFC4D0] mx-auto mb-4 flex items-center justify-center shadow-lg">
-            <User className="w-8 h-8 text-white" />
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FF8B9E] to-[#FFC4D0] mx-auto mb-3 flex items-center justify-center shadow-lg">
+            <User className="w-6 h-6 text-white" />
           </div>
-          <h1 className="text-3xl mb-3 text-[#4A4458]" style={{ fontFamily: 'var(--font-serif)' }}>
+          <h1 className="text-2xl mb-2 text-[#4A4458]" style={{ fontFamily: 'var(--font-serif)' }}>
             Welcome, Wellness Guardian!
           </h1>
           <p className="text-[#8B7E9E] text-lg mb-2">
@@ -68,7 +68,7 @@ export function UserDetailsScreen({ onComplete, onBack }: UserDetailsScreenProps
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
             placeholder="Enter your full name"
-            className="w-full p-5 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-lg text-[#4A4458]"
+            className="w-full p-4 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-lg text-[#4A4458]"
             autoFocus
           />
         </div>
@@ -82,7 +82,7 @@ export function UserDetailsScreen({ onComplete, onBack }: UserDetailsScreenProps
             <select
               value={countryCode}
               onChange={(e) => setCountryCode(e.target.value)}
-              className="w-32 p-5 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-base text-[#4A4458]"
+              className="w-32 p-4 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-base text-[#4A4458]"
             >
               {countryCodes.map(({ code, country, flag }) => (
                 <option key={code} value={code}>
@@ -95,7 +95,7 @@ export function UserDetailsScreen({ onComplete, onBack }: UserDetailsScreenProps
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="98765 43210"
-              className="flex-1 p-5 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-lg text-[#4A4458]"
+              className="flex-1 p-4 rounded-2xl border-2 border-[#F3EFFF] bg-white focus:border-[#FF8B9E] focus:outline-none transition-all text-lg text-[#4A4458]"
             />
           </div>
           <p className="text-xs text-[#8B7E9E] mt-2 ml-1">

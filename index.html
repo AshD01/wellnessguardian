@@ -3,14 +3,21 @@
   <html lang="en">
     <head>
       <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Health Concierge App Design</title>
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="theme-color" content="#FF8B9E" />
+      <link rel="manifest" href="/manifest.json" />
+      <title>Wellness Guardian</title>
+      <style>
+        html, body { height: 100%; margin: 0; }
+        #root { height: 100%; }
+        * { -webkit-tap-highlight-color: transparent; }
+      </style>
     </head>
-
     <body>
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
     </body>
   </html>
-  

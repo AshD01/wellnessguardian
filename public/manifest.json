@@ -1,0 +1,9 @@
+{
+  "name": "Wellness Guardian",
+  "short_name": "Wellness",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF7FF",
+  "theme_color": "#FF8B9E",
+  "start_url": "/"
+}
