@@ -112,7 +112,7 @@ export function SpotlightWheelScreen({ familyName, familyMembers, onPersonSelect
             <div className="text-center">
               <button
                 onClick={handleSpinClick}
-                className="px-12 py-6 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 border-white/50 mb-4"
+                className="px-12 py-6 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] border-2 border-[#D4718A] text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 mb-4"
               >
                 <span className="text-xl" style={{ fontFamily: 'var(--font-serif)' }}>
                   Spin the Spotlight

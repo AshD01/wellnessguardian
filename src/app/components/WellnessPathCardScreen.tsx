@@ -104,7 +104,7 @@ export function WellnessPathCardScreen({
         <div className="flex gap-3 pb-6">
           <button
             onClick={onShare}
-            className="flex-1 py-4 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] text-white hover:shadow-2xl transition-all shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2 border-2 border-white/20"
+            className="flex-1 py-4 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] border-2 border-[#D4718A] text-white hover:shadow-2xl transition-all shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2"
           >
             <Share2 className="w-4 h-4" />
             <span className="text-sm">Share</span>

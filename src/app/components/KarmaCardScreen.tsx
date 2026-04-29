@@ -137,7 +137,7 @@ export function KarmaCardScreen({
         <div className="space-y-3 mb-6">
           <button
             onClick={onShare}
-            className="w-full py-5 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] text-white hover:shadow-2xl transition-all shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2"
+            className="w-full py-5 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] border-2 border-[#D4718A] text-white hover:shadow-2xl transition-all shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2"
           >
             <Share2 className="w-5 h-5" />
             Share My Family's Destiny

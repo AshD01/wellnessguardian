@@ -107,7 +107,7 @@ export function FortuneWheelScreen({ familyName, familyMembers, onResult }: Fort
           {!hasSpun && (
             <button
               onClick={handleSpinClick}
-              className="px-12 py-6 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] text-white shadow-2xl hover:shadow-[0_0_30px_rgba(200,125,61,0.5)] transition-all duration-300 hover:-translate-y-1 border-2 border-white/30"
+              className="px-12 py-6 rounded-2xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] border-2 border-[#D4718A] text-white shadow-2xl hover:shadow-[0_0_30px_rgba(200,125,61,0.5)] transition-all duration-300 hover:-translate-y-1"
             >
               <span className="text-xl" style={{ fontFamily: 'var(--font-serif)' }}>
                 Spin the Wheel

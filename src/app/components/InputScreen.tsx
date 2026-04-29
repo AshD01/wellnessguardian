@@ -143,7 +143,7 @@ export function InputScreen({ onComplete, onBack }: InputScreenProps) {
                     <button
                       onClick={() => increment(category.id)}
                       disabled={counts[category.id] >= 9}
-                      className="w-9 h-9 rounded-lg bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] text-white hover:shadow-lg transition-all disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center"
+                      className="w-9 h-9 rounded-lg bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] border-2 border-[#D4718A] text-white hover:shadow-lg transition-all disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -165,7 +165,7 @@ export function InputScreen({ onComplete, onBack }: InputScreenProps) {
           <button
             onClick={handleSubmit}
             disabled={!familyName.trim() || totalCount === 0}
-            className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] text-white hover:shadow-xl transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
+            className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#FF8B9E] to-[#FFC4D0] border-2 border-[#D4718A] text-white hover:shadow-xl transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
           >
             Spin the Spotlight ({totalCount})
           </button>
