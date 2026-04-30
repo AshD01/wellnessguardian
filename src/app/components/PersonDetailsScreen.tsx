@@ -79,11 +79,11 @@ export function PersonDetailsScreen({ personLabel, familyName, onComplete, onBac
             <Phone className="w-4 h-4 text-[#E67D8E]" />
             <span>WhatsApp Number</span>
           </label>
-          <div className="flex gap-2">
+          <div className="flex gap-2 w-full">
             <select
               value={countryCode}
               onChange={(e) => setCountryCode(e.target.value)}
-              className="w-28 p-4 rounded-2xl border-2 border-[#DBD7E6] bg-white focus:border-[#E67D8E] focus:outline-none transition-all text-sm text-[#433D4F]"
+              className="w-24 shrink-0 p-3 rounded-2xl border-2 border-[#DBD7E6] bg-white focus:border-[#E67D8E] focus:outline-none transition-all text-sm text-[#433D4F]"
             >
               {countryCodes.map(({ code, flag }) => (
                 <option key={code} value={code}>{flag} {code}</option>
@@ -91,10 +91,11 @@ export function PersonDetailsScreen({ personLabel, familyName, onComplete, onBac
             </select>
             <input
               type="tel"
+              inputMode="numeric"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => setPhone(e.target.value.replace(/[^0-9]/g, ''))}
               placeholder="98765 43210"
-              className="flex-1 p-4 rounded-2xl border-2 border-[#DBD7E6] bg-white focus:border-[#E67D8E] focus:outline-none transition-all text-base text-[#433D4F]"
+              className="min-w-0 flex-1 p-3 rounded-2xl border-2 border-[#DBD7E6] bg-white focus:border-[#E67D8E] focus:outline-none transition-all text-base text-[#433D4F]"
             />
           </div>
           <p className="text-xs text-[#7D718E] mt-1 ml-1">We'll send their personalized wellness plan here</p>

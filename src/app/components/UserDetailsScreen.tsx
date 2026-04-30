@@ -40,7 +40,7 @@ export function UserDetailsScreen({ onComplete, onBack }: UserDetailsScreenProps
   };
 
   return (
-    <div className="min-h-dvh bg-gradient-to-b from-[#E1DEE6] to-[#DBD7E6] overflow-y-auto relative">
+    <div className="min-h-dvh bg-gradient-to-b from-[#E1DEE6] to-[#DBD7E6] overflow-x-hidden overflow-y-auto relative">
       <AnimatedBackground />
       <div className="max-w-lg mx-auto w-full px-6 py-5 relative z-10">
         <div className="text-center mb-8">
@@ -78,13 +78,13 @@ export function UserDetailsScreen({ onComplete, onBack }: UserDetailsScreenProps
             <Phone className="w-5 h-5 text-[#E67D8E]" />
             <span>Your WhatsApp Number</span>
           </label>
-          <div className="flex gap-2">
+          <div className="flex gap-2 w-full">
             <select
               value={countryCode}
               onChange={(e) => setCountryCode(e.target.value)}
-              className="w-32 p-4 rounded-2xl border-2 border-[#DBD7E6] bg-white focus:border-[#E67D8E] focus:outline-none transition-all text-base text-[#433D4F]"
+              className="w-24 shrink-0 p-3 rounded-2xl border-2 border-[#DBD7E6] bg-white focus:border-[#E67D8E] focus:outline-none transition-all text-sm text-[#433D4F]"
             >
-              {countryCodes.map(({ code, country, flag }) => (
+              {countryCodes.map(({ code, flag }) => (
                 <option key={code} value={code}>
                   {flag} {code}
                 </option>
@@ -92,10 +92,11 @@ export function UserDetailsScreen({ onComplete, onBack }: UserDetailsScreenProps
             </select>
             <input
               type="tel"
+              inputMode="numeric"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => setPhone(e.target.value.replace(/[^0-9]/g, ''))}
               placeholder="98765 43210"
-              className="flex-1 p-4 rounded-2xl border-2 border-[#DBD7E6] bg-white focus:border-[#E67D8E] focus:outline-none transition-all text-lg text-[#433D4F]"
+              className="min-w-0 flex-1 p-3 rounded-2xl border-2 border-[#DBD7E6] bg-white focus:border-[#E67D8E] focus:outline-none transition-all text-base text-[#433D4F]"
             />
           </div>
           <p className="text-xs text-[#7D718E] mt-2 ml-1">
